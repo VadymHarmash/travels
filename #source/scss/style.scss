@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
 @media (max-width: 1250px ) {
     header{
@@ -25,6 +25,24 @@
                             }
                         }
                     }
+                }
+            }
+        }
+        section{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                font-family: 'Nunito', sans-serif;
+                padding-left: 100px;
+                text-align: center;
+                .image{
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -60,6 +78,7 @@ header{
             display: flex;
             justify-content: space-around;
             padding-top: 75px;
+            padding-bottom: 90px;
             .header__left {
                 display: flex;
                 justify-content: space-between;
@@ -83,6 +102,7 @@ header{
                             }
                             &:first-child a{
                                 color: #4497f3;
+                                font-weight: 600;
                             }
                             &:last-child a{
                                 color: #3984f3;
@@ -90,6 +110,46 @@ header{
                                 padding: 10px 30px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-family: 'Nunito', sans-serif;
+            max-width: 45%;
+            padding-left: 100px;
+            &__title{
+                font-weight: 800;
+                font-size: 75px;
+                color: #091e40;
+                line-height: 1.15;
+                margin-bottom: 80px;
+            }
+            &__text{
+                font-size: 22px;
+                color: #81858e;
+                margin-bottom: 90px;
+            }
+            &__button{
+                button{
+                    width: 200px;
+                    height: 50px;
+                    color: #fff;
+                    text-transform: capitalize;
+                    background-color: #3984f3;
+                    border: none;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #588ec9;
                     }
                 }
             }

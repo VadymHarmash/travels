@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
 @media (max-width: 1250px) {
   header .container {
     max-width: 1024px;
@@ -41,6 +41,38 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+
+  section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-family: "Nunito", sans-serif;
+    padding-left: 100px;
+    text-align: center;
+  }
+  section .content .image {
+    width: 100%;
+    height: auto;
+  }
 }
 @media (max-width: 1024px) {
   .container {
@@ -65,6 +97,7 @@ header .container .header__wrapper {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-top: 75px;
+  padding-bottom: 90px;
 }
 header .container .header__wrapper .header__left {
   display: -webkit-box;
@@ -103,9 +136,60 @@ header .container .header__wrapper .header__left nav ul li a {
 }
 header .container .header__wrapper .header__left nav ul li:first-child a {
   color: #4497f3;
+  font-weight: 600;
 }
 header .container .header__wrapper .header__left nav ul li:last-child a {
   color: #3984f3;
   border: 3px #3984f3 solid;
   padding: 10px 30px;
+}
+header section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Nunito", sans-serif;
+  max-width: 45%;
+  padding-left: 100px;
+}
+header section .content__title {
+  font-weight: 800;
+  font-size: 75px;
+  color: #091e40;
+  line-height: 1.15;
+  margin-bottom: 80px;
+}
+header section .content__text {
+  font-size: 22px;
+  color: #81858e;
+  margin-bottom: 90px;
+}
+header section .content__button button {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #3984f3;
+  border: none;
+  cursor: pointer;
+}
+header section .content__button button:hover {
+  background-color: #588ec9;
 }
