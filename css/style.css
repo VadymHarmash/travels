@@ -1,77 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
 @media (max-width: 1250px) {
-  header .container {
+  .container {
     max-width: 1024px;
     margin: 0 auto;
-  }
-  header .container .header__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header .container .header__wrapper .header__right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-bottom: 30px;
-  }
-  header .container .header__wrapper .header__left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  header .container .header__wrapper .header__left nav {
-    width: 100%;
-  }
-  header .container .header__wrapper .header__left nav ul {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
-  section {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  section .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: "Nunito", sans-serif;
-    padding-left: 100px;
-    text-align: center;
-  }
-  section .content .image {
-    width: 100%;
-    height: auto;
   }
 }
 @media (max-width: 1024px) {
@@ -85,111 +16,81 @@
   }
 }
 @media (max-width: 576px) {
-  header .container {
+  .container {
     width: 100%;
-    margin: 0 auto;
+    padding: 0 10px;
   }
 }
-header .container .header__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 75px;
-  padding-bottom: 90px;
+._container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-header .container .header__wrapper .header__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-family: "Nunito", sans-serif;
+
+.header {
+  margin: 75px 0;
 }
-header .container .header__wrapper .header__left nav {
+
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-header .container .header__wrapper .header__left nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style: none;
-  white-space: nowrap;
-  padding: 0;
+@media (max-width: 1024px) {
+  .header__wrapper .container {
+    max-width: 767px;
+  }
+  .header__wrapper .header__left {
+    width: 100%;
+  }
+  .header__wrapper .header__left .image img {
+    margin: 0 auto;
+  }
+  .header__wrapper .header__right {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .header__wrapper .header__right nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__wrapper .header__right nav ul li:not(:last-child) {
+    margin: 0 0 30px 0;
+  }
+  .header__wrapper .header__right nav ul li:last-child a {
+    margin-left: -60px;
+  }
 }
-header .container .header__wrapper .header__left nav ul li a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #bab8b8;
-  margin: 0 30px;
-}
-header .container .header__wrapper .header__left nav ul li:first-child a {
-  color: #4497f3;
-  font-weight: 600;
-}
-header .container .header__wrapper .header__left nav ul li:last-child a {
-  color: #3984f3;
-  border: 3px #3984f3 solid;
-  padding: 10px 30px;
-}
-header section {
-  width: 100%;
+.header__wrapper .header__right nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-header section .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-family: "Nunito", sans-serif;
-  max-width: 45%;
-  padding-left: 100px;
+.header__wrapper .header__right nav ul li a {
+  text-decoration: none;
+  color: #bebcbc;
+  font-size: 20px;
+  font-family: "Nunito";
 }
-header section .content__title {
-  font-weight: 800;
-  font-size: 75px;
-  color: #091e40;
-  line-height: 1.15;
-  margin-bottom: 80px;
+.header__wrapper .header__right nav ul li:first-child a {
+  color: #4497f3;
+  font-weight: 500;
 }
-header section .content__text {
-  font-size: 22px;
-  color: #81858e;
-  margin-bottom: 90px;
+.header__wrapper .header__right nav ul li:last-child a {
+  border: 3px #3984f3 solid;
+  padding: 15px 45px;
+  color: #3984f3;
 }
-header section .content__button button {
-  width: 200px;
-  height: 50px;
-  color: #fff;
-  text-transform: capitalize;
-  background-color: #3984f3;
-  border: none;
-  cursor: pointer;
-}
-header section .content__button button:hover {
-  background-color: #588ec9;
+.header__wrapper .header__right nav ul li:not(:last-child) {
+  margin-right: 60px;
 }

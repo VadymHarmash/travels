@@ -1,52 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
 @media (max-width: 1250px ) {
-    header{
-        .container{
-            max-width: 1024px;
-            margin: 0 auto;
-                .header__wrapper{
-                    display: flex;
-                    flex-direction: column;
-                    .header__right{
-                        display: flex;
-                        justify-content: space-around;
-                        margin-bottom: 30px;
-                    }
-                    .header__left{
-                        display: flex;
-                        justify-content: space-between;
-                        nav{
-                            width: 100%;
-                            ul{
-                                width: 100%;
-                                display: flex;
-                                justify-content: space-between;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        section{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column-reverse;
-            .content{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                font-family: 'Nunito', sans-serif;
-                padding-left: 100px;
-                text-align: center;
-                .image{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
+    .container{
+        max-width: 1024px;
+        margin: 0 auto;
     }
+}
 
 @media (max-width: 1024px) {
     .container{
@@ -60,96 +19,80 @@
 }
 
 @media (max-width: 576px) {
-    header{
-        .container{
-            width: 100%;
-            margin: 0 auto;
-            }
-        }
+    .container{
+        width: 100%;
+        padding: 0 10px;
     }
+
+}
 
 @media (max-width: 320px) {
 
 }
 
-header{
-    .container{
-        .header__wrapper{
-            display: flex;
-            justify-content: space-around;
-            padding-top: 75px;
-            padding-bottom: 90px;
-            .header__left {
-                display: flex;
-                justify-content: space-between;
-                font-family: 'Nunito', sans-serif;
-                nav{
-                    display: flex;
-                    justify-content: space-between;
-                    list-style: none;
-                    ul{
-                        display: flex;
-                        justify-content: space-between;
-                        list-style: none;
-                        white-space: nowrap;
-                        padding: 0;
-                        li{
-                            a{
-                                font-size: 20px;
-                                text-decoration: none;
-                                color: #bab8b8;
-                                margin: 0 30px;
-                            }
-                            &:first-child a{
-                                color: #4497f3;
-                                font-weight: 600;
-                            }
-                            &:last-child a{
-                                color: #3984f3;
-                                border: 3px #3984f3 solid;
-                                padding: 10px 30px;
-                            }
+._container{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header{
+    margin: 75px 0;
+}
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        .container{
+            max-width: 767px;
+        }
+        .header__left{
+            .image img{
+                margin: 0 auto;
+            }
+            width: 100%;
+        }
+        .header__right{
+            margin: 0 auto;
+            margin-top: 30px;
+            nav{
+                ul{
+                    flex-direction: column;
+                    li{
+                        &:not(:last-child){
+                            margin: 0 0 30px 0;
+                        }
+                        &:last-child a{
+                            margin-left: -60px;
                         }
                     }
                 }
             }
         }
     }
-    section{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .content{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            font-family: 'Nunito', sans-serif;
-            max-width: 45%;
-            padding-left: 100px;
-            &__title{
-                font-weight: 800;
-                font-size: 75px;
-                color: #091e40;
-                line-height: 1.15;
-                margin-bottom: 80px;
-            }
-            &__text{
-                font-size: 22px;
-                color: #81858e;
-                margin-bottom: 90px;
-            }
-            &__button{
-                button{
-                    width: 200px;
-                    height: 50px;
-                    color: #fff;
-                    text-transform: capitalize;
-                    background-color: #3984f3;
-                    border: none;
-                    cursor: pointer;
-                    &:hover{
-                        background-color: #588ec9;
+    .header__right{
+        nav{
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: #bebcbc;
+                        font-size: 20px;
+                        font-family: 'Nunito';
+                    }
+                    &:first-child a{
+                        color: #4497f3;
+                        font-weight: 500;
+                    }
+                    &:last-child a{
+                        border: 3px #3984f3 solid;
+                        padding: 15px 45px;
+                        color: #3984f3;
+                    }
+                    &:not(:last-child){
+                        margin-right: 60px;
                     }
                 }
             }

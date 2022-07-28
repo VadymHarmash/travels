@@ -22,7 +22,8 @@ body {
 }
 
 ul[class],
-ol[class] {
+ol[class],
+li {
   list-style: none;
 }
 
