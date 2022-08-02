@@ -24,7 +24,7 @@
 ._container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 160px;
 }
 
 .header {
@@ -41,9 +41,9 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .header__wrapper .container {
-    max-width: 767px;
+    max-width: 1024px;
   }
   .header__wrapper .header__left {
     width: 100%;
@@ -67,6 +67,9 @@
   .header__wrapper .header__right nav ul li:last-child a {
     margin-left: -60px;
   }
+}
+.header__wrapper .header__right nav {
+  margin: 0 auto;
 }
 .header__wrapper .header__right nav ul {
   display: -webkit-box;
@@ -93,4 +96,79 @@
 }
 .header__wrapper .header__right nav ul li:not(:last-child) {
   margin-right: 60px;
+}
+
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 120px;
+}
+main .container__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: Nunito;
+  max-width: 40%;
+}
+main .container__content .content__title {
+  font-size: 75px;
+  color: #091e40;
+  font-weight: 900;
+}
+main .container__content .content__info {
+  color: #81858e;
+  font-size: 22px;
+}
+main .container__content .content__button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  background-color: #3984f3;
+  padding: 20px 45px;
+  white-space: nowrap;
+}
+@media (max-width: 1250px) {
+  main .container {
+    max-width: 100%;
+    display: block;
+  }
+  main .container__content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  main .container__content div:not(:last-child) {
+    padding-bottom: 60px;
+  }
+  main .container__image {
+    min-width: 1024px;
+    opacity: 0.5;
+  }
+}
+@media (max-width: 767px) {
+  main main {
+    min-width: 100%;
+  }
+  main main .container {
+    max-width: 567px;
+    margin: 0 auto;
+  }
+  main main .container__content {
+    min-width: 33%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  main .container {
+    width: 100%;
+  }
 }
